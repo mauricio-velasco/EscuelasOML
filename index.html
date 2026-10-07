@@ -2,103 +2,245 @@
 <html lang="es">
 <head>
   <meta charset="utf-8" />
-  <title>Escuela de métodos matemáticos</title>
+  <title>Cuarta escuela de métodos matemáticos en ML – 9 y 10 de Noviembre 2026</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
+    :root {
+      --navy: #002b5c;
+      --navy-2: #0a4a8f;
+      --accent: #c8912a;
+      --ink: #1f2933;
+      --muted: #5b6b7b;
+      --bg: #f4f6f8;
+      --card: #ffffff;
+      --border: #e4e9ef;
+      --link: #1c5f9e;
+    }
+    * {
+      box-sizing: border-box;
+    }
     body {
-      font-family: "Helvetica Neue", sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
       margin: 0;
-      background: #f9f9f9;
-      color: #333;
+      background: var(--bg);
+      color: var(--ink);
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a {
+      color: var(--link);
     }
     header {
-      background: #002b5c;
-      color: white;
-      padding: 2rem 1rem;
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 100%);
+      color: #fff;
+      padding: 3.5rem 1.25rem;
       text-align: center;
     }
     header h1 {
-      margin: 0 0 0.5rem;
-      font-size: 2rem;
+      margin: 0 0 1.1rem;
+      font-size: 2.25rem;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+      font-weight: 700;
     }
-    header p {
+    .badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      padding: 0.45rem 1.15rem;
+      border-radius: 999px;
+      font-size: 1rem;
+      letter-spacing: 0.01em;
+      margin-bottom: 1.35rem;
+    }
+    .header-course-title {
       margin: 0;
-      font-size: 1.2rem;
+      font-size: 1.4rem;
+      font-style: italic;
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.92);
+      letter-spacing: 0.02em;
     }
     .container {
       max-width: 900px;
-      margin: 2rem auto;
-      background: white;
-      padding: 2rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin: 2.5rem auto;
+      background: var(--card);
+      padding: 2.5rem 2.25rem;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      box-shadow: 0 1px 3px rgba(15, 35, 60, 0.06), 0 10px 28px rgba(15, 35, 60, 0.08);
     }
     section {
-      margin-bottom: 2rem;
+      margin-bottom: 2.25rem;
+    }
+    section:last-child {
+      margin-bottom: 0;
+    }
+    section p {
+      margin: 0 0 1rem;
+    }
+    section p:last-child {
+      margin-bottom: 0;
     }
     h2 {
-      color: #002b5c;
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 0.3rem;
+      color: var(--navy);
+      margin: 0 0 1.15rem;
+      font-size: 1.5rem;
+      letter-spacing: -0.005em;
+      position: relative;
+      padding-left: 1rem;
+    }
+    h2::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.15rem;
+      width: 4px;
+      height: 1.05em;
+      background: var(--accent);
+      border-radius: 2px;
     }
     ul {
-      padding-left: 1.2rem;
+      padding-left: 1.25rem;
+      margin: 0;
     }
     li {
-      margin-bottom: 0.6rem;
+      margin-bottom: 0.55rem;
+    }
+    li:last-child {
+      margin-bottom: 0;
     }
     .course-title {
-      font-weight: bold;
-      font-size: 1.1rem;
+      font-weight: 700;
+      font-size: 1.15rem;
+      margin: 1.25rem 0 0.75rem;
+      color: var(--navy);
+    }
+    .topics {
+      columns: 2;
+      column-gap: 2.5rem;
+    }
+    .topics li {
+      break-inside: avoid;
+    }
+    .info-grid {
+      margin: 0;
+      display: grid;
+      grid-template-columns: max-content 1fr;
+      align-items: start;
+      column-gap: 1.25rem;
+      row-gap: 0.9rem;
+    }
+    .info-grid dt {
+      margin: 0;
+      font-weight: 700;
+      color: var(--navy);
+      white-space: nowrap;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .info-grid dt .ico {
+      color: var(--accent);
+      flex: none;
+    }
+    .info-grid dd {
+      margin: 0;
+      color: var(--ink);
     }
     .footer {
       text-align: center;
       font-size: 0.9rem;
-      color: #555;
-      background: #f1f1f1;
-      padding: 1rem;
-      margin-top: 2rem;
-    }
-    a {
-      color: #005a9c;
+      color: var(--muted);
+      background: #eef1f4;
+      padding: 1.25rem;
+      margin-top: 2.5rem;
     }
     .register-box {
-      background: #eef6ff;
-      padding: 1rem;
-      border-left: 4px solid #005a9c;
+      background: linear-gradient(180deg, #f5f9ff, #eef6ff);
+      padding: 1.5rem;
+      border: 1px solid var(--border);
+      border-left: 5px solid var(--accent);
+      border-radius: 8px;
       margin-top: 1rem;
+    }
+    .register-box p {
+      margin: 0 0 0.9rem;
     }
     .register-box a {
       display: inline-block;
-      margin-top: 0.5rem;
-      padding: 0.5rem 1rem;
-      background: #005a9c;
-      color: white;
+      padding: 0.7rem 1.4rem;
+      background: var(--navy);
+      color: #fff;
       text-decoration: none;
-      border-radius: 4px;
+      font-weight: 600;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
     }
     .register-box a:hover {
-      background: #003f7a;
+      background: #0a3a6b;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+    }
+    .register-box a:active {
+      transform: translateY(0);
+    }
+    a:focus-visible,
+    .register-box a:focus-visible {
+      outline: 3px solid rgba(28, 95, 158, 0.5);
+      outline-offset: 2px;
+    }
+    @media (max-width: 640px) {
+      header {
+        padding: 2.5rem 1rem;
+      }
+      header h1 {
+        font-size: 1.75rem;
+      }
+      .header-course-title {
+        font-size: 1.15rem;
+      }
+      .container {
+        margin: 1.5rem 0.75rem;
+        padding: 1.5rem 1.25rem;
+      }
+      .topics {
+        columns: 1;
+      }
+      .info-grid {
+        grid-template-columns: 1fr;
+        row-gap: 0.4rem;
+      }
+      .info-grid dt {
+        white-space: normal;
+        margin-bottom: 0.15rem;
+      }
+      .register-box a {
+        display: block;
+        text-align: center;
+      }
     }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>Tercera escuela de métodos matemáticos</h1>
-  <p>16 y 18 de Junio 2026</p>
-  <p></p>
-  <p>Métodos Probabilísticos en Matemática Discreta</p>
-  <p></p>
+  <h1>Cuarta escuela de métodos matemáticos en ML</h1>
+  <span class="badge">9 y 10 de Noviembre de 2026</span>
+  <p class="header-course-title">“A Short Course on the Christoffel Function”</p>
 </header>
 
 <div class="container">
 
   <section id="intro">
     <p>
-      Del 16 al 18 de Junio se realizará un mini-curso sobre la interacción entre probabilidad y matemáticas discretas. El curso estará a cargo de Tristram Bogart (Universidad de los Andes, Colombia), un investigador reconocido en combinatoria y matemáticas discretas.
+      El 9 y 10 de noviembre de 2026 se realizará un mini-curso sobre la función de Christoffel,
+      sus propiedades básicas y sus aplicaciones. El curso estará a cargo de Jean Bernard Lasserre (CNRS) y Didier Henrion (LAAS-CNRS), investigadores destacados y quienes han descubierto muchos de los avances recientes en esta área.
     </p>
     <p>
-      <strong>Requisitos previos:</strong> Cursos básicos de cálculo y probabilidad.
+      <strong>Requisitos previos:</strong> Cursos básicos de cálculo, álgebra lineal y probabilidad.
     </p>
   </section>
 
@@ -106,31 +248,54 @@
     <h2>Curso</h2>
 
     <p class="course-title">
-      Métodos Probabilísticos en las Matemáticas Discretas
+      “A Short Course on the Christoffel Function”
     </p>
 
     <ul>
       <li>
-        <strong>Cursillista:</strong> Tristram Bogart
-        <a href="https://scholar.google.com/citations?user=YbicPRQAAAAJ&hl=en" target="_blank">[Página Web]</a>
+        <strong>Cursillistas:</strong>
+        <a href="https://scholar.google.com/citations?user=Mh8pC5sAAAAJ&hl=fr" target="_blank">Jean Bernard Lasserre</a> y
+        <a href="https://scholar.google.com/citations?user=UME_UEYAAAAJ&hl=fr" target="_blank">Didier Henrion</a>
       </li>
 
-
-      <li><strong>Resumen:</strong>
-        Si usted cree en la existencia de un cierto tipo de grafo u otro objeto combinatorio pero no sabe cómo construirlo, ¿qué haría? Erdős y Rényi introdujeron el siguiente método poderoso: demostrar que bajo una buena selección de los parámetros, un objeto aleatorio tiene las propiedades deseadas con probabilidad mayor que cero. Veremos varios aspectos del método probabilístico y aplicaciones a la teoría de grafos, la teoría de códigos y más allá.
+      <li>
+        <strong>Resumen:</strong>
+        La función de Christoffel es una cantidad que mide qué tan bien pueden concentrarse los polinomios de un grado dado alrededor de un punto, en relación con una medida de referencia. Tiene un papel central en la teoría de aproximación de funciones y en el estudio de polinomios ortogonales, y está estrechamente relacionada con el núcleo de Christoffel–Darboux. Recientemente se ha descubierto que tiene tambien una enorme cantidad de aplicaciones en data science, probabilidad y estadística.<br> 
+        Este minicurso es una introducción al núcleo de Christoffel-Darboux (CD), la función de Christoffel (CF), y algunas de sus aplicaciones. Los temas a tratar incluyen:<br>
+        <ul class="topics">
+          <li>Motivación en minería de datos y análisis de datos</li>
+          <li>Matriz de momentos y polinomios ortogonales</li>
+          <li>Núcleo de Christoffel-Darboux (CD) y función de Christoffel (CF)</li>
+          <li>Propiedad de dicotomía</li>
+          <li>Otras propiedades (asintóticas, p. ej. aproximación de densidades)</li>
+          <li>Medida de equilibrio y ecuación de Pell</li>
+          <li>Diseño óptimo de experimentos</li>
+          <li>Certificación racional para la optimización polinómica</li>
+          <li>Relación de la CF con los polinomios positivos</li>
+          <li>Interpolación de funciones (posiblemente) discontinuas mediante la CF</li>
+          <li>Una variante de la CF con una nueva propiedad asintótica</li>
+          <li>Factorización de la CF</li>
+          <li>Modelos gráficos y esparsidad de la CF</li>
+          <li>CF univariante y su aplicación a la detección de anomalías</li>
+        </ul>
       </li>
     </ul>
   </section>
 
   <section id="location">
     <h2>Fecha y Lugar</h2>
-    <p>
-      <strong>Fechas y Horario:</strong> Martes 16 (14.30-16.00) y Jueves 18 (13.30-15.00 y 15.30-17.00)<br/>
-      <strong>Lugar:</strong> Facultad de Ingeniería (FING)<br/>
-      <strong>Salón:</strong> 101<br/>
-      <strong>Idioma:</strong> El curso será dictado en español<br/>
-
-    </p>
+    <dl class="info-grid">
+      <dt><svg class="ico" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="17" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Fechas:</dt>
+      <dd>Lunes 9 y Martes 10 de Noviembre de 2026</dd>
+      <dt><svg class="ico" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Horario:</dt>
+      <dd>13.30–15.00 y 15.30–17.00</dd>
+      <dt><svg class="ico" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Lugar:</dt>
+      <dd>Facultad de Ingeniería (FING)</dd>
+      <dt><svg class="ico" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21V4a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v17"/><line x1="2" y1="21" x2="22" y2="21"/><circle cx="15.5" cy="12" r="1.1" fill="currentColor" stroke="none"/></svg>Salón:</dt>
+      <dd>Por definir (TBA)</dd>
+      <dt><svg class="ico" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>Idioma:</dt>
+      <dd>El curso será dictado en inglés</dd>
+    </dl>
   </section>
 
   <section id="registration">
@@ -139,7 +304,7 @@
       <p>
         La participación es libre y gratuita, pero se requiere registro previo por cuestiones organizativas.
       </p>
-      <a href="https://forms.gle/2Wck2CSHwTf5hfHg8" target="_blank">Registro</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSd-EA-QKg1CxZQKWonXI4TxG3kjMO8ipEpbN3XptKqQy6IYDQ/viewform?usp=publish-editor" target="_blank">Registro</a>
     </div>
   </section>
 
@@ -150,7 +315,8 @@
       Mauricio Velasco — (CMAT, FCIEN)
     </p>
     <p>
-      Agradecemos el apoyo del programa de profesores visitantes del Centro de Matemáticas <a href="https://www.cmat.edu.uy/" target="_blank">CMAT</a>.
+      Agradecemos el apoyo del Instituto Franco-Uruguayo de Matemática e Interacciones <a href="https://irl-uy-ifumi.apps.math.cnrs.fr/" target="_blank">IFUMI</a> y del programa de profesores visitantes del Centro de Matemáticas <a href="https://www.cmat.edu.uy/" target="_blank">CMAT</a>
+      
     </p>
   </section>
 
@@ -162,15 +328,3 @@
 
 </body>
 </html>
-
-<!--
-  <section id="agenda">
-    <h2>Agenda Provisional</h2>
-    <ul>
-      <li><strong>Martes 16:</strong> Clase 1</li>
-      <li><strong>Jueves 18:</strong> Clase 2</li>
-      <li><strong>Viernes 19:</strong> Clase 3</li>
-    </ul>
-  </section>
-
--->
